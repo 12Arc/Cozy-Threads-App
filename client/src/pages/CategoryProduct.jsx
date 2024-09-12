@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout/layout";
 import { useParams, useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
 import toast from "react-hot-toast"; // For displaying success messages
