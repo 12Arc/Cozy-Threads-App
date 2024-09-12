@@ -8,7 +8,8 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm run dev --prefix ./client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "Archana",
@@ -26,7 +27,10 @@
     "mongoose": "^8.6.1",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.4",
+    "path": "^0.12.7",
+    "serve-static": "^1.16.2",
     "slugify": "^1.6.6",
-    "stripe": "^16.10.0"
+    "stripe": "^16.10.0",
+    "url": "^0.11.4"
   }
 }
