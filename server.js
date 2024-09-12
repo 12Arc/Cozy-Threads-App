@@ -24,12 +24,8 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 
-app.use(express.static(path.join(__dirname, 'client/public')));
+app.use(express.static(path.join(__dirname, 'client')));
 
-// Catch-all route to serve the index.html from the 'dist' directory
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
 
 //routes
 app.use("/api/auth", authRoutes);
