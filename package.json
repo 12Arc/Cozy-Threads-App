@@ -9,7 +9,10 @@
     "server": "nodemon server.js",
     "client": "npm run dev --prefix ./client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "client-install": "cd client && npm install ",
+    "client-build": "cd client && npm run build",
+    "heroku-postbuild": "npm run client-install && npm run client-build"
+
   },
   "keywords": [],
   "author": "Archana",
